@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href={% static "css/all.css" %} />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href={% static "css/bootstrap.css" %} />
+    <!-- Custom -->
+    <link rel="stylesheet" href={% static "css/style.css" %} />
+
+    <title>Data Base | {% block title %} {% endblock %}</title>
+</head>
+
+<body>
+    <!-- Navbar Ever -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-3" style="height: 60px">
+        <div class="container">
+            <a href="/" class="navbar-brand"><h3>Data Base</h3></a>
+            <button
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/account/register" class="nav-link">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    {% block content %} {% endblock %}
+
+    <!-- Java Script -->
+    <script src={% static "js/jquery-3.3.1.min.js" %}></script>
+    <script src={% static "js/bootstrap.bundle.min.js" %}></script>
+    <script src={% static "js/main.js" %}></script>
+</body>
+</html>
